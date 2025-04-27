@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <Version>3.0.9</Version>
-        <RootNamespace>Heliosphere</RootNamespace>wwwwwwwwwwwwwwwwwwww
+        <RootNamespace>Heliosphere</RootNamespace>
         <TargetFramework>net8.0-windows</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
