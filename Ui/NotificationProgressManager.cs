@@ -2,7 +2,6 @@ using System.Diagnostics;
 using System.Numerics;
 using System.Text;
 using Dalamud.Interface.ImGuiNotification;
-using Dalamud.Interface.Textures;
 using Dalamud.Interface.Textures.TextureWraps;
 using Dalamud.Plugin.Services;
 using Heliosphere.Util;
@@ -116,8 +115,7 @@ internal class NotificationProgressManager : IDisposable {
 
         var setIcon = !(this.LastSeenState.TryGetValue(task.TaskId, out var lastState) && lastState == state);
         if (setIcon && this.Icons.TryGetValue(state, out var icon)) {
-            var tex = new ForwardingSharedImmediateTexture(icon);
-            notif.IconTexture = tex;
+            notif.SetIconTexture(icon, true);
         }
 
         var sb = new StringBuilder();
